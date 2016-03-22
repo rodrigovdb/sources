@@ -1,0 +1,2 @@
+# some more ls aliases
+alias l='ls -lFah --color=auto'

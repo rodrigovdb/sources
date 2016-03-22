@@ -1,0 +1,8 @@
+# some more ls aliases
+alias l='ls -lFh --color=auto'
+alias la='ls -laFh --color=auto'
+
+# svn alias
+alias st='svn status --color=auto'
+alias up='svn update --color=auto'
+alias ci='svn commit --color=auto'

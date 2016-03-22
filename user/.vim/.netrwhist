@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/vagrant/sandbox/devlandia/wise_elephant_reports/public/vendor/datepicker'
+let g:netrw_dirhist_2='/home/vagrant/sandbox/devlandia/wise_elephant_reports/public/vendor/datepicker/css'
+let g:netrw_dirhist_3='/home/vagrant/sandbox/devlandia/wise_elephant_reports/public/vendor'
+let g:netrw_dirhist_4='/home/vagrant/sandbox/devlandia/wise_elephant_reports/app/controllers'
