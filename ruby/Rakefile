@@ -1,0 +1,11 @@
+require 'sinatra/activerecord/rake'
+
+%w[. app].each do |dir|
+  $LOAD_PATH.unshift(dir) unless $LOAD_PATH.include?(dir)
+end
+
+namespace :db do
+  task :load_config do
+    require 'app'
+  end
+end

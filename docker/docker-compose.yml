@@ -1,0 +1,52 @@
+version: '3.1'
+
+networks:
+  net:
+
+services:
+  postgres:
+    image: postgres:alpine
+    networks:
+      net:
+        aliases:
+          - postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER:      desenv
+      POSTGRES_PASSWORD:  rapadura
+      POSTGRES_DB:        database
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  api:
+    image: net_app
+    build: .
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+    volumes:
+      - .:/var/app
+    networks:
+      net:
+        aliases:
+          - api
+  nginx:
+    image: nginx
+    command: ["nginx-debug", "-g", "daemon off;"]
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+    depends_on:
+      - api
+    networks:
+      net:
+        aliases:
+          - nginx
+
+volumes:
+  postgres_data:

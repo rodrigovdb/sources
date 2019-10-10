@@ -1,0 +1,17 @@
+default: &default
+  adapter   : postgresql
+  encoding  : unicode
+  host      : postgres
+  username  : desenv
+  password  : rapadura
+
+development:
+  <<: *default
+  database  : golf_development
+test:
+  <<: *default
+  database  : golf_test
+
+production:
+  <<: *default
+  database  : golf_production
