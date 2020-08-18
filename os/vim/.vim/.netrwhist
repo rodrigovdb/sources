@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/vagrant/sandbox/devlandia/wise_elephant_reports/public/vendor/datepicker'
-let g:netrw_dirhist_2='/home/vagrant/sandbox/devlandia/wise_elephant_reports/public/vendor/datepicker/css'
-let g:netrw_dirhist_3='/home/vagrant/sandbox/devlandia/wise_elephant_reports/public/vendor'
-let g:netrw_dirhist_4='/home/vagrant/sandbox/devlandia/wise_elephant_reports/app/controllers'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/rodrigo/sandbox/sesac/songfile-api/app'
+let g:netrw_dirhist_2='/home/rodrigo/sandbox/sesac/business-contact-api/app/resources'
+let g:netrw_dirhist_3='/home/rodrigo/sandbox/sesac/business-contact-api/app/concepts/contact/operations'
+let g:netrw_dirhist_4='/home/rodrigo/sandbox/rodrigovdb/zoom/zoom/app/mailers'
+let g:netrw_dirhist_5='/home/rodrigo/sandbox/rodrigovdb/zoom/zoom'
