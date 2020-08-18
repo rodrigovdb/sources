@@ -1,27 +1,15 @@
-call pathogen#infect()
+" call pathogen#infect()
+execute pathogen#infect()
 
-syntax enable
-" filetype plugin indent on
+syntax on
 
 " Para ligar/desligar o set paste com F11
 set pastetoggle=<F12>
 
-" Tamanho da tabulação
 set ts=2
-
-" Background preto
 set bg=dark
-
-" Analisador de sintaxe para deixar colorido
-syntax on
-
-" Para tabulação continuar da mesma maneira da linha anterior
 set ai
-
-" Substitui tabulação por espaços
  set et
-
-" Line numbers
 set number
 
 " Ignore case when searching
@@ -33,13 +21,13 @@ set smartcase
 " Highlight search results
 set hlsearch
 
+" Folding stuff. See http://vim.wikia.com/wiki/Folding and use zc / za
+setlocal foldmethod=syntax
+setlocal foldlevelstart=20
+
 " Highlight espaços no fim da linha
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
-
-map! ,e <emphasis>
-map! ,p <para>
-map <F3> v/>^Mx
 
 " Habilitar highlights
 " Twig
@@ -66,3 +54,13 @@ cab qA  qa
 cab Xa  xa
 cab xA  xa
 cab XA  xa
+
+" Insere require "pry"; binding.pry
+command P :normal i require "pry"; binding.pry<ESC>
+
+" NERDTree plugin
+" autocmd vimenter * NERDTree
+map <C-x> :NERDTreeToggle<CR> " Ctrl + x -> Toggle nerdtree
+map <C-l> :tabn<CR>           " Ctrl + n -> Next tab
+map <C-h> :tabp<CR>           " Ctrl + h -> Previous tab
+map <C-n> :tabnew<CR>         " Ctrl + n -> New tab
