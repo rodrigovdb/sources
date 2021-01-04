@@ -77,7 +77,3 @@ command D :normal i puts "\n\n"; puts '#' * 90; puts ""; puts '#' * 90; puts "\n
 
 " Additional configs
 source $HOME/.vim/config/nerdtree.vim
-
-" Database aliases
-let g:local   = "postgresql://postgres:postgres@localhost/arca-embarcai-sales_development"
-let g:staging = "postgresql://axdzvtraxrtevb:bbb6521be5430b164323e5f2bc61cb841baf5dd9d84d48ff3a0ad6e12db819f0@ec2-52-71-85-210.compute-1.amazonaws.com/dela0uurr1ge7k"
