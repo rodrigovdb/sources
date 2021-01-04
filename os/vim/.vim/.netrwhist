@@ -1,7 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/rodrigo/sandbox/sesac/songfile-api/app'
-let g:netrw_dirhist_2='/home/rodrigo/sandbox/sesac/business-contact-api/app/resources'
-let g:netrw_dirhist_3='/home/rodrigo/sandbox/sesac/business-contact-api/app/concepts/contact/operations'
-let g:netrw_dirhist_4='/home/rodrigo/sandbox/rodrigovdb/zoom/zoom/app/mailers'
-let g:netrw_dirhist_5='/home/rodrigo/sandbox/rodrigovdb/zoom/zoom'
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/rodrigo/sandbox/arca/sales-web-app/lib/sendgrid_api/parsers'
+let g:netrw_dirhist_3='/home/rodrigo/sandbox/arca/sales-web-app/app/services'
+let g:netrw_dirhist_2='/home/rodrigo/sandbox/sources/os/zsh'
+let g:netrw_dirhist_1='/home/rodrigo/sandbox/sources/os'

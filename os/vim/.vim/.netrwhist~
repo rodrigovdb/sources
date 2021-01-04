@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/rodrigo/sandbox/sesac/sesac-website-api/app/resources/v1/license'
-let g:netrw_dirhist_2='/home/rodrigo/sandbox/sesac/sesac-website-api/app/resources/v1'
-let g:netrw_dirhist_3='/home/rodrigo/sandbox/sesac/sesac-website-api/app/resources'
-let g:netrw_dirhist_4='/home/rodrigo/sandbox/sesac/sesac-website-api/app'
-let g:netrw_dirhist_5='/home/rodrigo/sandbox/sesac/sesac-website-api/app/resources/v1/license'
-let g:netrw_dirhist_6='/home/rodrigo/sandbox/sesac/sesac-website-api/app/resources/v1'

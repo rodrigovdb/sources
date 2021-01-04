@@ -1,16 +1,25 @@
 " call pathogen#infect()
 execute pathogen#infect()
 
+" Plug plugins
+" https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
+
+" http://kien.github.io/ctrlp.vim/#installation
+Plug 'kien/ctrlp.vim'
+
+call plug#end()
+" Plug plugins - END
+
 syntax on
-
-" Para ligar/desligar o set paste com F11
-set pastetoggle=<F12>
-
 set ts=2
 set bg=dark
 set ai
  set et
 set number
+
+" Para ligar/desligar o set paste com F11
+set pastetoggle=<F12>
 
 " Ignore case when searching
 set ignorecase
@@ -57,10 +66,18 @@ cab XA  xa
 
 " Insere require "pry"; binding.pry
 command P :normal i require "pry"; binding.pry<ESC>
+" puts "\n\n" debug
+command D :normal i puts "\n\n"; puts '#' * 90; puts ""; puts '#' * 90; puts "\n"
 
-" NERDTree plugin
-" autocmd vimenter * NERDTree
-map <C-x> :NERDTreeToggle<CR> " Ctrl + x -> Toggle nerdtree
-map <C-l> :tabn<CR>           " Ctrl + n -> Next tab
-map <C-h> :tabp<CR>           " Ctrl + h -> Previous tab
-map <C-n> :tabnew<CR>         " Ctrl + n -> New tab
+" Disable cursors
+" noremap <Up> <Nop>
+" noremap <Down> <Nop>
+" noremap <Left> <Nop>
+" noremap <Right> <Nop>
+
+" Additional configs
+source $HOME/.vim/config/nerdtree.vim
+
+" Database aliases
+let g:local   = "postgresql://postgres:postgres@localhost/arca-embarcai-sales_development"
+let g:staging = "postgresql://axdzvtraxrtevb:bbb6521be5430b164323e5f2bc61cb841baf5dd9d84d48ff3a0ad6e12db819f0@ec2-52-71-85-210.compute-1.amazonaws.com/dela0uurr1ge7k"
