@@ -1,12 +1,29 @@
-" call pathogen#infect()
-execute pathogen#infect()
-
 " Plug plugins
+"
+" After add all plugins, run
+" :source %
+" Run :PlugInstall
+"
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
+" https://github.com/terryma/vim-multiple-cursors
+Plug 'terryma/vim-multiple-cursors'
+
 " http://kien.github.io/ctrlp.vim/#installation
 Plug 'kien/ctrlp.vim'
+
+" https://github.com/preservim/nerdtree
+Plug 'preservim/nerdtree'
+
+" https://vimawesome.com/plugin/vim-polyglot
+" Plug 'sheerun/vim-polyglot'
+
+" https://vimawesome.com/plugin/vim-ruby
+Plug 'vim-ruby/vim-ruby'
+
+" https://github.com/tpope/vim-commentary
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 " Plug plugins - END
@@ -15,8 +32,11 @@ syntax on
 set ts=2
 set bg=dark
 set ai
- set et
+set et
 set number
+
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType html       setlocal shiftwidth=2 tabstop=2
 
 " Para ligar/desligar o set paste com F11
 set pastetoggle=<F12>
@@ -75,5 +95,13 @@ command D :normal i puts "\n\n"; puts '#' * 90; puts ""; puts '#' * 90; puts "\n
 " noremap <Left> <Nop>
 " noremap <Right> <Nop>
 
-" Additional configs
-source $HOME/.vim/config/nerdtree.vim
+" NERDTree plugin
+" autocmd vimenter * NERDTree
+map <C-x> :NERDTreeToggle<CR> " Ctrl + x -> Toggle nerdtree
+map <C-l> :tabn<CR>           " Ctrl + n -> Next tab
+map <C-h> :tabp<CR>           " Ctrl + h -> Previous tab
+" map <C-n> :tabnew<CR>         " Ctrl + n -> New tab
+
+" Vim Commentary
+noremap \ :Commentary<CR>
+autocmd FileType ruby setlocal commentstring=#\ %s
