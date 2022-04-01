@@ -25,6 +25,9 @@ Plug 'vim-ruby/vim-ruby'
 " https://github.com/tpope/vim-commentary
 Plug 'tpope/vim-commentary'
 
+" https://github.com/airblade/vim-gitgutter
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 " Plug plugins - END
 
@@ -88,6 +91,8 @@ cab XA  xa
 command P :normal i require "pry"; binding.pry<ESC>
 " puts "\n\n" debug
 command D :normal i puts "\n\n"; puts '#' * 90; puts ""; puts '#' * 90; puts "\n"
+" command RS !docker-compose run --rm rspec %
+command RS !rspec %
 
 " Disable cursors
 " noremap <Up> <Nop>
@@ -105,3 +110,7 @@ map <C-h> :tabp<CR>           " Ctrl + h -> Previous tab
 " Vim Commentary
 noremap \ :Commentary<CR>
 autocmd FileType ruby setlocal commentstring=#\ %s
+
+" CtrlP
+set wildignore+=*/tmp/*,*/log/*,*/node_modules/*,*.so,*.swp,*.zip
+
