@@ -28,6 +28,9 @@ Plug 'tpope/vim-commentary'
 " https://github.com/airblade/vim-gitgutter
 Plug 'airblade/vim-gitgutter'
 
+" https://github.com/puremourning/vimspector#installation
+" Plug 'puremourning/vimspector'
+
 call plug#end()
 " Plug plugins - END
 
@@ -52,6 +55,9 @@ set smartcase
 
 " Highlight search results
 set hlsearch
+
+" Makes <del> key don't behave weird on iterm
+set backspace=indent,eol,start
 
 " Folding stuff. See http://vim.wikia.com/wiki/Folding and use zc / za
 setlocal foldmethod=syntax
@@ -114,3 +120,6 @@ autocmd FileType ruby setlocal commentstring=#\ %s
 " CtrlP
 set wildignore+=*/tmp/*,*/log/*,*/node_modules/*,*.so,*.swp,*.zip
 
+" This piece of shit makes del key works on MacOS, instead of makes it
+" backspace
+inoremap <C-d> <Del>
