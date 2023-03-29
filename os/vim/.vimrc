@@ -31,10 +31,15 @@ Plug 'airblade/vim-gitgutter'
 " https://github.com/puremourning/vimspector#installation
 " Plug 'puremourning/vimspector'
 
+" https://draculatheme.com/vim
+Plug 'dracula/vim', { 'as': 'dracula' }
+
 call plug#end()
 " Plug plugins - END
 
-syntax on
+" syntax on
+syntax enable
+colorscheme dracula
 set ts=2
 set bg=dark
 set ai
