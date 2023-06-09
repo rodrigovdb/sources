@@ -28,6 +28,15 @@ Plug 'tpope/vim-commentary'
 " https://github.com/airblade/vim-gitgutter
 Plug 'airblade/vim-gitgutter'
 
+" https://draculatheme.com/vim
+Plug 'dracula/vim', { 'as': 'dracula' }
+
+" https://github.com/tpope/vim-haml
+" Plug 'tpope/vim-haml'
+
+" https://github.com/kchmck/vim-coffee-script
+Plug 'kchmck/vim-coffee-script'
+
 " https://github.com/puremourning/vimspector#installation
 " Plug 'puremourning/vimspector'
 
@@ -97,6 +106,7 @@ cab qA  qa
 cab Xa  xa
 cab xA  xa
 cab XA  xa
+cab vt vertical term
 
 " Insere require "pry"; binding.pry
 command P :normal i require "pry"; binding.pry<ESC>
